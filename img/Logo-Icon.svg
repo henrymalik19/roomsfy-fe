@@ -1,0 +1,13 @@
+<svg id="Logo_Icon" data-name="Logo / Icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="44" height="44" viewBox="0 0 44 44">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="bg" width="44" height="44" rx="12" fill="#eb5e55"/>
+    </clipPath>
+  </defs>
+  <g id="Group_1" data-name="Group 1">
+    <rect id="bg-2" data-name="bg" width="44" height="44" rx="12" fill="#eb5e55"/>
+    <g id="Mask_Group_1" data-name="Mask Group 1" clip-path="url(#clip-path)">
+      <path id="_" data-name="" d="M12.813,26H10.484V12.505h9.032v8.767h-2.33v-6.94H12.813V26ZM4.838,26H2.973V12.879l-1.4,1.193L0,12.734,14.214.64,15,0l.786.64L30,12.734l-1.571,1.337-1.4-1.193v8.393H25.161V11.03L15,2.533,4.838,11.03V26Z" transform="translate(7 8)" fill="#fff"/>
+    </g>
+  </g>
+</svg>
