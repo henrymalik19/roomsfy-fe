@@ -251,9 +251,6 @@
 }
 
 @media (max-width: 480px) {
-  body {
-    background-color: coral;
-  }
 }
 /* countries section */
 
@@ -368,7 +365,7 @@
 
 @media (max-width: 768px) {
   .property-types {
-    padding: 30px 10%;
+    padding: 30px 5%;
   }
   .property-types .properties {
     overflow-x: scroll;
@@ -383,6 +380,12 @@
   }
   .property-types .properties .card img {
     width: 95%;
+  }
+}
+
+@media (max-width: 480px) {
+  .property-types .title {
+    font-size: 20px;
   }
 }
 
@@ -446,6 +449,10 @@
   .inspiration .header {
     flex-direction: column;
   }
+  .inspiration .header .title {
+    margin: auto 0;
+    font-size: 20px;
+  }
   .inspiration .header .description {
     margin-top: 20px;
   }
@@ -456,5 +463,11 @@
   .inspiration .trips .card {
     margin-top: 10px;
     width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .inspiration {
+    padding: 25px 5%;
   }
 }
