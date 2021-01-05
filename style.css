@@ -135,6 +135,22 @@
   background-color: #fff;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
+  display: flex;
+}
+
+.jumbotron .middle .search-icon .material-icons {
+  background-color: var(--primary);
+  color: #fff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  font-size: 18px;
+  font-weight: bolder;
+}
+
+.jumbotron .middle .search-icon .material-icons p {
+  display: none;
 }
 
 .search .subtext {
@@ -245,19 +261,29 @@
     display: flex;
     justify-content: center;
   }
+  .jumbotron .middle .search-icon .material-icons {
+    width: 80%;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+  }
+  .jumbotron .middle .search-icon .material-icons p {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 10px;
+  }
   .bottom {
     display: none;
   }
 }
 
-@media (max-width: 480px) {
-}
 /* countries section */
 
 .countries {
   display: flex;
   /* flex-direction: column; */
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   padding: 100px 15%;
 }
 
@@ -317,6 +343,22 @@
 }
 
 @media (max-width: 768px) {
+  .countries {
+    flex-direction: row;
+    padding: 20px 0;
+    margin: 50px 5%;
+    overflow-x: scroll;
+  }
+  .countries .card {
+    margin-right: 20px;
+    flex: 1 0 80%;
+  }
+  .countries .card:last-child {
+    margin: 0;
+  }
+  .countries .card img {
+    height: 70%;
+  }
 }
 
 /* browse by property type */
@@ -367,25 +409,24 @@
   .property-types {
     padding: 30px 5%;
   }
+  .property-types .title {
+    font-size: 20px;
+  }
   .property-types .properties {
     overflow-x: scroll;
+    padding-bottom: 20px;
   }
   .property-types .properties .card {
     flex: 1 0 60%;
     margin: 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    box-shadow: none;
+    /* align-items: center; */
+    -webkit-box-shadow: 0px 4px 10px -5px rgba(81, 81, 81, 0.49);
+    box-shadow: 0px 4px 10px -5px rgba(81, 81, 81, 0.49);
   }
   .property-types .properties .card img {
     width: 95%;
-  }
-}
-
-@media (max-width: 480px) {
-  .property-types .title {
-    font-size: 20px;
   }
 }
 
@@ -473,9 +514,6 @@
   }
 }
 
-@media (max-width: 480px) {
-}
-
 /* apartments nearby */
 .apartments-nearby {
   padding: 50px 15%;
@@ -554,7 +592,7 @@
   margin-top: 50px;
 }
 
-@media (max-width: 4768px) {
+@media (max-width: 768px) {
   .apartments-nearby {
     padding: 25px 5%;
   }
