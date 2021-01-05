@@ -109,23 +109,23 @@
   /* background-color: aqua; */
 }
 
-.location,
-.checkin,
-.checkout,
-.guests {
+.middle .location,
+.middle .checkin,
+.middle .checkout,
+.middle .guests {
   display: flex;
   flex-direction: column;
   padding: 10px;
   background-color: #fff;
 }
 
-.location,
-.checkin,
-.checkout {
+.middle .location,
+.middle .checkin,
+.middle .checkout {
   border-right: 1px solid #70707066;
 }
 
-.location {
+.middle .location {
   max-width: 275px;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
@@ -424,7 +424,8 @@
   flex-direction: row;
   align-items: center;
   padding: 15px 80px 15px 15px;
-  width: calc(100% * (1 / 3) - 80px - 15px - 20px);
+  flex-basis: 33%;
+  /* width: calc(100% * (1 / 3) - 80px - 15px - 20px); */
 }
 
 .trips .card .info {
@@ -444,7 +445,7 @@
 
 @media (max-width: 768px) {
   .inspiration {
-    padding-top: 25px;
+    padding: 25px 5%;
   }
   .inspiration .header {
     flex-direction: column;
@@ -459,15 +460,114 @@
   .inspiration .trips {
     margin-top: 25px;
     flex-direction: column;
+    flex-flow: column wrap;
+    height: 500px;
+    justify-content: flex-start;
+    overflow-x: scroll;
   }
   .inspiration .trips .card {
     margin-top: 10px;
     width: 100%;
+    flex-basis: auto;
+    margin-right: 5%;
   }
 }
 
 @media (max-width: 480px) {
-  .inspiration {
+}
+
+/* apartments nearby */
+.apartments-nearby {
+  padding: 50px 15%;
+  display: flex;
+  flex-direction: column;
+}
+
+.apartments-nearby .title {
+  color: var(--font-primary);
+  font-weight: bolder;
+  font-size: 24px;
+}
+.apartments-nearby .apartments {
+  margin: 50px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.apartments-nearby .apartments .card {
+  width: 32%;
+}
+.apartments-nearby .apartments .card img {
+  width: 100%;
+}
+.apartments-nearby .apartments .card .info {
+  padding: 15px 20px 30px 20px;
+}
+.apartments-nearby .apartments .card .info .upper .description {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--font-primary);
+}
+.apartments-nearby .apartments .card .info .upper .location {
+  font-size: 14px;
+  color: var(--font-subtext);
+  margin-top: 5px;
+}
+.apartments-nearby .apartments .card .info .lower {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+.apartments-nearby .apartments .card .info .lower .price {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--font-primary);
+}
+.apartments-nearby .apartments .card .info .lower .rating {
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--font-primary);
+  display: flex;
+  align-items: center;
+}
+.apartments-nearby .apartments .card .info .lower .rating .icon {
+  margin-right: 5px;
+  color: var(--primary);
+}
+.apartments-nearby .apartments .card .info .lower .rating span {
+  font-weight: normal;
+  color: var(--font-subtext);
+}
+.apartments-nearby .load-more-btn {
+  align-self: center;
+  background-color: var(--primary);
+  display: flex;
+  justify-content: center;
+  padding: 30px 40px;
+}
+
+.apartments-nearby .load-more-btn {
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+}
+.apartments-nearby .outside-img {
+  margin-top: 50px;
+}
+
+@media (max-width: 4768px) {
+  .apartments-nearby {
     padding: 25px 5%;
+  }
+  .apartments-nearby .apartments {
+    margin: 50px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  .apartments-nearby .apartments .card:first-child {
+    width: 100%;
+  }
+  .apartments-nearby .apartments .card:not(:first-child),
+  .apartments-nearby .outside-img {
+    display: none;
   }
 }
